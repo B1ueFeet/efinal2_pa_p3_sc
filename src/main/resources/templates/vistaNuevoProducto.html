@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form th:action="@{/productos/crear}" th:object="${producto}" method="POST">
+		<table>
+			<tr>
+				<td>
+					<label>Nombre:</label>
+				</td>
+
+				<td>
+					<input type="text" id="nombre" th:field="${producto.nombre}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label>Codigo de Barras Maestro:</label>
+				</td>
+				<td>
+					<input type="text" id="codigoB" th:field="${producto.codigoB}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<label>Categoria:</label>
+				</td>
+				<td>
+					<input type="text" id="categoria" th:field="${producto.categoria}">
+				</td>
+			</tr>
+		</table>
+		<input class="btn btn-primary" type="submit" value="Crear">
+	</form>
+</body>
+
+</html>
